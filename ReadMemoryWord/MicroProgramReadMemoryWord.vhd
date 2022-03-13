@@ -30,7 +30,6 @@ ARCHITECTURE MicroProgram_architecture OF MicroProgram IS
    (
 	 -- Lesen eines Speicherwortes
 	 16#000# => (OPCODE => MICRO_LDA, OPERAND => X"05AF"),
-	 16#000# => (OPCODE => MICRO_LDD, OPERAND => OPERAND_NONE),
 	 16#001# => (OPCODE => MICRO_MVI, OPERAND => OPERAND_NONE)
 	 );   
 
