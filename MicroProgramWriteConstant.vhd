@@ -28,27 +28,12 @@ ARCHITECTURE MicroProgram_architecture OF MicroProgram IS
   TYPE Instruction_Array_Type is ARRAY (natural range <>) of Instruction_Type;
   CONSTANT Instruction_Array: Instruction_Array_Type := 
    (
-	 -- 5.2
-	 --16#000# => (OPCODE => MICRO_LDA, OPERAND => X"A00E"),
-	 --16#001# => (OPCODE => MICRO_LDD, OPERAND => X"CABA"),
-	 --16#002# => (OPCODE => MICRO_MVO, OPERAND => OPERAND_NONE),
-	 --16#003# => (OPCODE => MICRO_NOP, OPERAND => OPERAND_NONE),
-    --16#004# => (OPCODE => MICRO_STP, OPERAND => OPERAND_NONE)
-	 
-	 --5.3
-	 --16#000# => (OPCODE => MICRO_LDA, OPERAND => X"05AF"),
-	 --16#000# => (OPCODE => MICRO_LDD, OPERAND => OPERAND_NONE),
-	 --16#001# => (OPCODE => MICRO_MVI, OPERAND => OPERAND_NONE)
-	 
-	 --5.4
-	  --16#000# => (OPCODE => MICRO_LDA, OPERAND => X"0A0F"),
-	  --16#001# => (OPCODE => MICRO_MVI, OPERAND => OPERAND_NONE),
-	  --16#002# => (OPCODE => MICRO_LDA, OPERAND => X"0510"),
-	  --16#003# => (OPCODE => MICRO_MVO, OPERAND => OPERAND_NONE)
-    
-	 --5.5
-	 
-	
+	 -- Schreiben einer Konstante in den Speicher
+	 16#000# => (OPCODE => MICRO_LDA, OPERAND => X"A00E"),
+	 16#001# => (OPCODE => MICRO_LDD, OPERAND => X"CABA"),
+	 16#002# => (OPCODE => MICRO_MVO, OPERAND => OPERAND_NONE),
+	 16#003# => (OPCODE => MICRO_NOP, OPERAND => OPERAND_NONE),
+    	 16#004# => (OPCODE => MICRO_STP, OPERAND => OPERAND_NONE)	
 	 );   
 
   -- Interner Intruction_Pointer (Programmzähler)
